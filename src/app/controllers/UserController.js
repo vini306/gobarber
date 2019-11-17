@@ -14,7 +14,7 @@ class UserController {
     });
 
     if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validator ' });
+      return res.status(400).json({ error: 'Validator' });
     }
 
     const userExists = await User.findOne({ where: { email: req.body.email } });
